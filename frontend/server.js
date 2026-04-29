@@ -14,7 +14,7 @@ app.post("/submit", async (req, res) => {
     const { name, email, message } = req.body;
 
     try {
-        const response = await fetch(""http://backend:5000/submit"", {
+        const response = await fetch("http://backend:5000/submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
