@@ -1,132 +1,86 @@
-# 🚀 Node + Flask Docker Application
+# 🚀 Node + Flask DevOps Deployment Project
 
-A full-stack application where a Node.js (Express) frontend communicates with a Flask backend. The project is containerized using Docker and managed with Docker Compose.
+## 📌 Overview
+This project demonstrates deployment of a full-stack application using AWS EC2.
 
----
-
-## 📌 Features
-
-- Node.js frontend with form
-- Flask backend to process form data
-- Communication between frontend and backend
-- Dockerized services
-- Docker Compose for multi-container setup
+- Frontend: Node.js
+- Backend: Flask (Python)
+- Deployment: AWS EC2
 
 ---
 
-## 🛠️ Technologies Used
-
-- Node.js (Express)
-- Python (Flask)
-- Docker
-- Docker Compose
-
----
-
-## 📂 Project Structure
+## 🧩 Project Structure
 
 node-flask-docker-compose/
-├── frontend/
-│   ├── server.js
-│   ├── package.json
-│   ├── Dockerfile
-│   └── index.html
-│
 ├── backend/
-│   ├── app.py
-│   ├── requirements.txt
-│   └── Dockerfile
-│
-├── docker-compose.yaml
-├── .gitignore
+├── frontend/
+├── aws-deployment/
+│   ├── part1-single-ec2/
+│   └── part2-two-ec2/
+├── docker-compose.yml
 └── README.md
 
 ---
 
-## ▶️ How It Works
+## 🏗️ Architecture
 
-1. User fills the form in Node frontend
-2. Frontend sends POST request to Flask backend
-3. Flask processes and returns response
-4. Frontend displays response
+### Part 1: Single EC2 Deployment
+Both frontend and backend are deployed on a single EC2 instance.
 
----
+User → EC2 → Frontend + Backend
 
-## 🧪 Running Locally (Without Docker)
-
-### Backend
-
-cd backend  
-pip install -r requirements.txt  
-python app.py  
+Details:
+aws-deployment/part1-single-ec2/part1-single-ec2.md
 
 ---
 
-### Frontend
+### Part 2: Two EC2 Deployment
+Frontend and backend are deployed on separate EC2 instances.
 
-cd frontend  
-npm install  
-node server.js  
+User → Frontend EC2 → Backend EC2
 
----
-
-### Open in Browser
-
-http://localhost:3000
+Details:
+aws-deployment/part2-two-ec2/part2-two-ec2.md
 
 ---
 
-## 🐳 Docker Setup
-
-### Backend Dockerfile
-
-- Uses Python base image
-- Installs dependencies
-- Runs Flask app
-
-### Frontend Dockerfile
-
-- Uses Node.js image
-- Installs dependencies
-- Runs Express server
+## ⚙️ Tech Stack
+- AWS EC2
+- Node.js
+- Python (Flask)
+- Linux (Ubuntu)
+- Git & GitHub
 
 ---
 
-## 📦 Docker Compose
-
-docker-compose.yaml connects:
-
-- frontend → port 3000
-- backend → port 5000
-
-Services communicate using:
-
-http://backend:5000
+## 🧪 Features
+- Form submission from frontend to backend
+- REST API communication
+- Multi-instance deployment
+- Real-world debugging scenarios
 
 ---
 
-## ⚠️ Note
-
-Docker could not be executed locally due to system restrictions (admin permissions required). However, Dockerfiles and docker-compose configuration are correctly implemented.
-
----
-
-## 📸 Screenshots
-
-### Frontend Form
-![Form](./screenshots/form.png)
-
-### Form Submission Response
-![Response](./screenshots/response.png)
-
-### Backend Running
-![Backend](./screenshots/backend.png)
-
-### Frontend Running
-![Frontend](./screenshots/frontend.png)
+## 📌 Key Learnings
+- EC2 instance setup and deployment
+- Security Groups configuration
+- Public vs Private IP usage
+- Cross-instance communication
+- Debugging network and port issues
+- Structuring production-like projects
 
 ---
 
-## 🔗 GitHub Repository
+## 🛑 Note
+This project uses development servers for learning purposes.
 
-https://github.com/Shubhams260/node-flask-docker-compose
+For production environments, use:
+- NGINX
+- Load Balancer
+- HTTPS (SSL)
+- Process managers (PM2 / Gunicorn)
+
+---
+
+## 👨‍💻 Author
+Shubham Singh
