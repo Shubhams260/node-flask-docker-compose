@@ -86,12 +86,6 @@ http://<FRONTEND_PUBLIC_IP>
 ### Both EC2 Instances Running
 ![Both Instances](screenshots/both-instances-running.png)
 
-### Backend EC2 Running
-![Backend EC2](screenshots/backend-ec2-running.png)
-
-### Frontend EC2 Running
-![Frontend EC2](screenshots/frontend-ec2-running.png)
-
 ### Backend Terminal
 ![Backend Terminal](screenshots/backend-terminal.png)
 
@@ -102,7 +96,7 @@ http://<FRONTEND_PUBLIC_IP>
 ![Frontend Browser](screenshots/frontend-browser.png)
 
 ### Form Submission Response
-![Form Response](screenshots/form-response.png)
+![Form Response](screenshots/browser-response.png)
 
 ---
 
