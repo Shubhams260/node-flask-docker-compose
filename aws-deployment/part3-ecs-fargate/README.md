@@ -99,7 +99,7 @@ Backend successfully accessible using ALB DNS URL.
 
 Application accessible via:
 
-http://<ALB-DNS-NAME>
+http://http://flask-backend-alb-1424350651.ap-south-1.elb.amazonaws.com/
 
 ---
 
